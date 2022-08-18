@@ -25,22 +25,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAp-yC-4dh">
-                                <rect key="frame" x="20" y="74" width="374" height="50"/>
+                                <rect key="frame" x="20" y="74" width="374" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="0FD-ec-8zR"/>
+                                    <constraint firstAttribute="height" constant="100" id="0FD-ec-8zR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVk-15-18t">
-                                <rect key="frame" x="157" y="132" width="100" height="5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="157" y="182" width="100" height="5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="DV8-hq-ru4"/>
                                     <constraint firstAttribute="width" constant="100" id="Nfb-T3-VGF"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c3G-c9-O0n">
+                                <rect key="frame" x="344" y="74.5" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="gN7-0a-Wmq"/>
+                                    <constraint firstAttribute="height" constant="50" id="iJd-Ff-IOi"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -50,17 +57,19 @@
                             <constraint firstItem="CAp-yC-4dh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Lr2-wF-jgg"/>
                             <constraint firstItem="cVk-15-18t" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RRA-gR-zSp"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CAp-yC-4dh" secondAttribute="trailing" constant="20" id="XlX-U6-Ndg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c3G-c9-O0n" secondAttribute="trailing" constant="20" id="nYc-aC-cWy"/>
+                            <constraint firstItem="c3G-c9-O0n" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="tc1-6H-pT0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="blackView" destination="cVk-15-18t" id="r0N-DW-PlU"/>
-                        <outlet property="blackViewWidth" destination="Nfb-T3-VGF" id="ojS-ec-16v"/>
+                        <outlet property="starImageView" destination="c3G-c9-O0n" id="l7C-ck-6rJ"/>
                         <outlet property="tutorialLabel" destination="CAp-yC-4dh" id="YYz-8j-Bcy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="76"/>
+            <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="xIF-XN-eVb">
@@ -118,6 +127,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
